@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     background: var(--pale-blue) url(../images/pattern-background-desktop.svg) no-repeat;
     background-size: contain;
 }
@@ -149,7 +149,9 @@ footer {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 1.4;
 }
 footer a {
     text-decoration: none;
@@ -171,6 +173,24 @@ footer a:first-of-type:hover {
         padding: 30px 20px 
     }
 }
-@media (max-width: 376px) {
-    
+@media (max-width: 300px) {
+    * {
+        font-size: 12.5px;
+    }
+    .container .text {
+        padding: 20px 10px 
+    }
+    .container .text .music-purchase {
+        flex-direction: column;
+    }
+    .container .text .music-purchase .pricing {
+        flex-direction: column;
+    }
+    .container .text .music-purchase .pricing img {
+        margin-right: 0;
+        margin-bottom: 5px
+    }
+    .container .text .music-purchase .pricing .plan {
+        margin-bottom: 5px
+    }
 }
