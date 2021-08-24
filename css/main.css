@@ -11,9 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
     background: var(--pale-blue) url(../images/pattern-background-desktop.svg) no-repeat;
     background-size: contain;
+    position: relative;
 }
 :root {
     --pale-blue: hsl(225, 100%, 94%);
@@ -40,6 +40,8 @@ a {
     border-radius: 20px;
     background-color: white;
     box-shadow: 0px 0px 30px 0px #eee;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 .container .image-holder {
     max-height: 220px;
@@ -131,7 +133,8 @@ a {
 .container .text button {
     background-color: var(--bright-blue);
     margin-bottom: 35px;
-    box-shadow: 0 20px 20px rgba(177, 167, 214, 0.5)
+    box-shadow: 0 20px 20px rgba(177, 167, 214, 0.5);
+    font-weight: bold;
 }
 .container .text button:hover {
     opacity: 0.5;
@@ -146,12 +149,18 @@ a {
     font-weight: bold;
 }
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+    /* text-align: center; */
+    line-height: 1.2;
+}
+footer .attribution {
     text-align: center;
-    line-height: 1.4;
 }
 footer a {
     text-decoration: none;
@@ -171,6 +180,9 @@ footer a:first-of-type:hover {
     }
     .container .text {
         padding: 30px 20px 
+    }
+    footer {
+        bottom: 5px;
     }
 }
 @media (max-width: 300px) {
@@ -192,5 +204,8 @@ footer a:first-of-type:hover {
     }
     .container .text .music-purchase .pricing .plan {
         margin-bottom: 5px
+    }
+    footer {
+        bottom: 5px;
     }
 }
